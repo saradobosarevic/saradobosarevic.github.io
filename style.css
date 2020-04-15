@@ -4,11 +4,10 @@ body{
     flex-direction: column;
 }
 .intro-block{
-    height: 60vh;
-    /* background-image: url("https://cdn.imgbin.com/4/18/4/imgbin-dal-vegetarian-cuisine-international-year-of-pulses-legume-spice-rice-grains-assorted-seeds-and-beans-collage-pZTexPdeAMAs1WaafnC7yhQqB.jpg"); */
-    background-image: url("https://uapcorporate.com/wp-content/uploads/2019/11/environment-modified.jpg") ;
+    height: 50vh;
+    background-image: url(https://uapcorporate.com/wp-content/uploads/2019/11/environment-modified.jpg);
     background-size: cover;
-    background-position: left;
+    background-position: center;
     background-repeat: no-repeat;
 } 
 .navigation{
