@@ -1,0 +1,163 @@
+body{
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+}
+.intro-block{
+    height: 60vh;
+    /* background-image: url("https://cdn.imgbin.com/4/18/4/imgbin-dal-vegetarian-cuisine-international-year-of-pulses-legume-spice-rice-grains-assorted-seeds-and-beans-collage-pZTexPdeAMAs1WaafnC7yhQqB.jpg"); */
+    background-image: url("https://uapcorporate.com/wp-content/uploads/2019/11/environment-modified.jpg") ;
+    background-size: cover;
+    background-position: left;
+    background-repeat: no-repeat;
+} 
+.navigation{
+    height: 60px;
+    width:100%;
+    background:none;
+    /* overflow: auto;     */ 
+}
+.navigation .header-items{
+    padding: 0;
+    margin: 0 0 0 350px;
+    list-style: none; 
+}
+.navigation .header-item{
+    float: left;
+}
+.navigation a{
+    text-decoration: none;
+    color: #8b8b8b;
+    width: 100px;
+    display: block;
+    padding: 20px 15px;
+    font-family: "Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
+    columns: #f2f2f2;
+    text-align: center;
+    letter-spacing: 2px;
+}
+.navigation a:hover{
+    transition: 0.5s;
+    text-transform: uppercase;
+}
+
+.highlights{
+    margin: 30px 0 80px 0;
+}
+.col-12{
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+.text-center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.text-white{
+    color : #fff;
+}
+.font-weight-light{
+    font-weight: 500;
+}
+/* .zaglavlje{
+    font-size: 200%;
+    font-weight: bolder;
+    text-shadow: 1px 1px #ffffff;
+} */
+
+.line-1{
+    color: white;
+    position: relative;
+    /* font-style: italic; */
+    /* margin: 80px 300px; */
+    margin-top: 80px;
+
+    font-size: 50px;
+    /* text-align: center; */
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);  
+    font-weight: bolder;
+    /* text-shadow: 2px 2px #000000; */
+}
+
+
+/* Animation */
+.anim-typewriter{
+  animation: typewriter 3s steps(44) 1s 1 normal both,
+             blinkTextCursor 500ms steps(44) infinite normal;
+}
+@keyframes typewriter{
+  from{width: 0;}
+  to{width: 16em;}
+}
+
+
+.post-slider{
+    position: relative;
+}
+.post-slider .post-wrapper{
+
+    width: 84%;
+    height: 350px;
+    margin: 0px auto;
+    overflow: hidden;
+}
+.post-slider .post-wrapper .post{
+    position: relative;
+    width: 200;
+    height: 350px;
+    margin: 0px 10px;
+    display: inline-block;
+    background:none;
+    /* border-radius: 5px; */
+    /* box-shadow: 1rem 1rem 1rem -1rem #a0a0a0; */
+}
+.post-slider .post-wrapper .post  .slider-image{
+    width :100%;
+    height: 100%;
+}
+.arrow-prev{
+    left: 30px;
+    top:50%;
+    position:absolute;
+    width: 30px;
+    height: 50px;
+}
+.arrow-next svg{
+    fill: black;
+    
+}
+.arrow-prev svg{
+    fill: black;
+}
+
+.arrow-next{
+    right:30px;
+    top:50%;
+    position: absolute;
+    width: 30px;
+    height: 50px;
+    
+
+}
+.slider-title{
+    font-weight: normal;
+    font-family: "Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
+    text-align: center;
+    color: #8b8b8b;
+}
+
+.arrow-next svg{
+    transform: rotate(180deg);
+}
+.post-info{
+    text-align: center;
+    font-weight: 900;
+}
+
+footer {
+    background-color: rgb(242, 243, 245);
+    height: 30vh;
+}
