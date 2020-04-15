@@ -18,8 +18,11 @@ body{
     /* overflow: auto;     */ 
 }
 .navigation .header-items{
+    display: flex;
+    justify-content: center;
     padding: 0;
-    margin: 0 0 0 350px;
+    margin-inline-start: 0;
+    margin-block-start: 0;
     list-style: none; 
 }
 .navigation .header-item{
