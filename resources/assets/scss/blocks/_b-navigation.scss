@@ -1,0 +1,144 @@
+.navigation {
+    height: 50px;
+    top: 0;
+    transition: top 0.3s;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    background-color: white;
+
+    .header-items {
+        display: none;
+        justify-content: center;
+        padding: 0;
+        margin-inline-start: 0;
+        margin-block-start: 0;
+        list-style: none; 
+        @include respond-to(992) {
+            display: flex;
+        }
+
+        a {
+            text-decoration: none;
+            color: #8b8b8b;
+            width: 100px;
+            display: block;
+            padding: 20px 15px;
+            font-family: "Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
+            columns: #f2f2f2;
+            text-align: center;
+            letter-spacing: 2px;
+        }
+        a:hover {
+            transition: 0.5s;
+            text-transform: uppercase;
+        }
+    }
+
+    .header-item {
+        float: left;
+    }
+
+    .m-hamburger__icon {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 10px;
+        color: white;
+
+        &-close {
+            display: none;
+        }
+
+        &--active {
+            .m-hamburger__icon-open {
+                display: none;
+            }
+
+            .m-hamburger__icon-close {
+                display: block;
+            }        
+        }
+
+        @include respond-to(992) {
+            display: none;
+        }
+    }
+
+    &--scrolled {
+        background-color: rgba(45, 48, 51, 0.9);
+
+        .m-hamburger__icon {
+            svg {
+                fill: white;
+            }
+        }
+        
+        .header-items {
+            li {
+                a {
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+.m-hamburger {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    background-color: white;
+    top: 50px;
+    width: 100%;
+    transition: display 0.3s;
+
+    ul {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        padding: 0;
+        margin: 0px;
+        flex-direction: column;
+
+        .m-hamburger__item {
+            margin: 10px 0px;
+
+            &.active {
+                a {
+                    font-weight: bold;
+                }
+            }
+            a {
+                text-decoration: none;
+                font-family: Helvetica Neue,Helvetica,Roboto,Arial,sans-serif;
+                color: #8b8b8b;
+
+            }
+
+        }
+    }
+
+    &--scrolled {
+        background-color: rgba(45, 48, 51, 0.9);
+
+        ul {    
+            .m-hamburger__item {    
+                a {
+                    svg {
+                        fill: white;
+                    }
+                    color: white;
+                }
+            }
+        }
+    }
+
+    &--active {
+        display: block;
+    }
+
+    @include respond-to(992) {
+        display: none;
+    }
+}

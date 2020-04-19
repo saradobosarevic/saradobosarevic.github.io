@@ -3,36 +3,72 @@
 <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
 
 <head>
-  <title>Dobos</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script type="text/javascript" src="slick/slick.min.js"></script>
-  <link rel = "stylesheet" type = "text/css" href="style.css">
-  <link rel = "stylesheet" type = "text/css" href = "footer.css">
-  <link rel = "stylesheet" type = "text/css" href="slick/slick.css" >
-  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" >
-  <link rel="stylesheet" type="text/css" href="normalize.css" >
-
+  <script src="slick/slick.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="public/css/master-bundle.css">
+  <!-- <link rel="stylesheet" type="text/css" href="footer.css"> -->
+  <link rel="stylesheet" type="text/css" href="slick/slick.css">
+  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css">
+  <link rel="stylesheet" type="text/css" href="normalize.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
 </head>
 
 <body>
-  <div class="navigation">
-    <ul class="header-items">
-      <li class="header-item"><a href="file:///Users/sara/Documents/my_projects/dobos/index.html"
-          target="_top">Pocetna</a></li>
-      <li class="header-item"><a href="https://www.w3schools.com/html/" target="_top">Proizvodi</a></li>
-      <li class="header-item"><a href="">Korpa</a></li>
-      <li class="header-item"><a href="file:///Users/sara/Documents/my_projects/dobos/about.html">O nama</a></li>
-      <li class="header-item"><a href="">Kontakt</a></li>
-    </ul>
-  </div>
+    <!-- Simulate a smartphone / tablet -->
+    <div class="navigation" id="navbar">
+      <ul class="header-items">
+        <li class="header-item"><a href="file:///Users/sara/Documents/my_projects/dobos/index.html"
+            target="_top">Pocetna</a></li>
+        <li class="header-item"><a href="https://www.w3schools.com/html/" target="_top">Proizvodi</a></li>
+        <li class="header-item"><a href="">Korpa</a></li>
+        <li class="header-item"><a href="file:///Users/sara/Documents/my_projects/dobos/about.html">O nama</a></li>
+        <li class="header-item"><a href="">Kontakt</a></li>
+      </ul>
 
-  <section class = "intro-block" id="home">
-      <div class="row h-100 align-items-center">
-        <div class = "col-12 text-center">
-          <!-- <h3 class = "zaglavlje text-center">Lepo vas je videti ovde</h3> -->
-          <p class = "line-1 anim-typewriter">Dobrodosli! Mi smo Bio butik Dobos!</p>
-        </div>
+      <div class="m-hamburger__icon">
+        <svg class="m-hamburger__icon-open" xmlns="http://www.w3.org/2000/svg" width="24" height="22" viewBox="0 0 24 22"><g><g><path d="M0 20a1.5 1.5 0 0 1 1.5-1.5H18a1.5 1.5 0 1 1 0 3H1.5A1.5 1.5 0 0 1 0 20zM0 2A1.5 1.5 0 0 1 1.5.5h21a1.5 1.5 0 1 1 0 3h-21A1.5 1.5 0 0 1 0 2zm0 9a1.5 1.5 0 0 1 1.5-1.5h21a1.5 1.5 0 1 1 0 3h-21A1.5 1.5 0 0 1 0 11z"></path></g></g></svg>
+        <svg class="m-hamburger__icon-close" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"><g><g transform="rotate(45 9 9)"><path d="M3 11a2 2 0 1 0 0-4h-4a2 2 0 1 0 0 4zm4-1.815V19a2 2 0 1 0 4 0v-8h8a2 2 0 1 0 0-4h-8v-8a2 2 0 1 0-4 0v9.815a2.025 2.025 0 0 0 0 .37z"></path></g></g></svg>
       </div>
+     </div>
+
+    <div class="m-hamburger" id="navbar" menu-hamburger="">
+      <ul class="m-hamburger__list">
+          <li class="active m-hamburger__item">
+                  <a href="#" class="m-hamburger__link" data-tab-for="my-vanmoof" data-direction="down">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="12" viewBox="0 0 14 12"><g><g><path fill="#fff" d="M8.77 9.33c.362.4.271.999-.092 1.398L7.41 11.826c-.362.3-.906.2-1.178-.2-.363-.399-.272-.998.09-1.397l1.27-1.098c.362-.2.906-.2 1.178.2zm4.761-2.316l-2.062 1.74c-.375.387-.938.29-1.313-.097s-.281-.967.094-1.353l.281-.387H.937A.954.954 0 0 1 0 5.95c0-.483.375-.967.938-.967h9.593l-3.75-3.287c-.375-.29-.468-.966-.093-1.353.28-.387.937-.484 1.312-.097l5.531 4.834c.281.193.469.58.469.967s-.188.773-.469.967z"></path></g></g></svg>
+          Pocetna            </a>
+          </li>
+          <li class="m-hamburger__item">
+                          <a href="#" class="m-hamburger__link" data-tab-for="bikes" data-direction="down">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="12" viewBox="0 0 14 12"><g><g><path fill="#fff" d="M8.77 9.33c.362.4.271.999-.092 1.398L7.41 11.826c-.362.3-.906.2-1.178-.2-.363-.399-.272-.998.09-1.397l1.27-1.098c.362-.2.906-.2 1.178.2zm4.761-2.316l-2.062 1.74c-.375.387-.938.29-1.313-.097s-.281-.967.094-1.353l.281-.387H.937A.954.954 0 0 1 0 5.95c0-.483.375-.967.938-.967h9.593l-3.75-3.287c-.375-.29-.468-.966-.093-1.353.28-.387.937-.484 1.312-.097l5.531 4.834c.281.193.469.58.469.967s-.188.773-.469.967z"></path></g></g></svg>
+                  Proizvodi            </a>
+          </li>
+          <li class="m-hamburger__item">
+              <a href="#" class="m-hamburger__link" data-tab-for="details" data-direction="up">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="12" viewBox="0 0 14 12"><g><g><path fill="#fff" d="M8.77 9.33c.362.4.271.999-.092 1.398L7.41 11.826c-.362.3-.906.2-1.178-.2-.363-.399-.272-.998.09-1.397l1.27-1.098c.362-.2.906-.2 1.178.2zm4.761-2.316l-2.062 1.74c-.375.387-.938.29-1.313-.097s-.281-.967.094-1.353l.281-.387H.937A.954.954 0 0 1 0 5.95c0-.483.375-.967.938-.967h9.593l-3.75-3.287c-.375-.29-.468-.966-.093-1.353.28-.387.937-.484 1.312-.097l5.531 4.834c.281.193.469.58.469.967s-.188.773-.469.967z"></path></g></g></svg>
+                  Korpa         </a>
+          </li>
+          <li class="m-hamburger__item">
+              <a href="#" class="m-hamburger__link" data-tab-for="orders-invoices" data-direction="up">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="12" viewBox="0 0 14 12"><g><g><path fill="#fff" d="M8.77 9.33c.362.4.271.999-.092 1.398L7.41 11.826c-.362.3-.906.2-1.178-.2-.363-.399-.272-.998.09-1.397l1.27-1.098c.362-.2.906-.2 1.178.2zm4.761-2.316l-2.062 1.74c-.375.387-.938.29-1.313-.097s-.281-.967.094-1.353l.281-.387H.937A.954.954 0 0 1 0 5.95c0-.483.375-.967.938-.967h9.593l-3.75-3.287c-.375-.29-.468-.966-.093-1.353.28-.387.937-.484 1.312-.097l5.531 4.834c.281.193.469.58.469.967s-.188.773-.469.967z"></path></g></g></svg>
+                  O nama       </a>
+          </li>
+          <li class="m-hamburger__item">
+              <a href="#" class="m-hamburger__link" data-tab-for="bike-doctor" data-direction="up">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="12" viewBox="0 0 14 12"><g><g><path fill="#fff" d="M8.77 9.33c.362.4.271.999-.092 1.398L7.41 11.826c-.362.3-.906.2-1.178-.2-.363-.399-.272-.998.09-1.397l1.27-1.098c.362-.2.906-.2 1.178.2zm4.761-2.316l-2.062 1.74c-.375.387-.938.29-1.313-.097s-.281-.967.094-1.353l.281-.387H.937A.954.954 0 0 1 0 5.95c0-.483.375-.967.938-.967h9.593l-3.75-3.287c-.375-.29-.468-.966-.093-1.353.28-.387.937-.484 1.312-.097l5.531 4.834c.281.193.469.58.469.967s-.188.773-.469.967z"></path></g></g></svg>
+                  Kontakt           </a>
+          </li>
+      </ul>
+    </div>
+
+  <section class="intro-block" id="home">
+    <div class="bottom-banner">
+      <h2 class="banner-title">Bio butik Dobos</h2>
+      <div class="banner-subtitle">Vama na usluzi vec vise od 10 godina </div>
+    </div>
   </section>
 
 
@@ -48,24 +84,24 @@
               <h4>
                 feminormal
               </h4>
-              </div>
-          </a>
-          </div>
-
-          <div class="post">
-            <img src="img3.jpg" alt="" class="slider-image">
             </div>
+          </a>
+        </div>
 
-            <div class="post">
-              <a href="">
-                <img src="img4.jpg" alt="" class="slider-image">
-              </a>
-              </div>
-              <div class="post">
-                <a href="">
-                  <img src="img5.jpg" alt="" class="slider-image">
-                </a>
-                </div>
+        <div class="post">
+          <img src="img3.jpg" alt="" class="slider-image">
+        </div>
+
+        <div class="post">
+          <a href="">
+            <img src="img4.jpg" alt="" class="slider-image">
+          </a>
+        </div>
+        <div class="post">
+          <a href="">
+            <img src="img5.jpg" alt="" class="slider-image">
+          </a>
+        </div>
 
       </div>
 
@@ -105,53 +141,83 @@
     </div>
   </div>
 
+  
 
-  <footer class="footer-wrapper">
-    <div class="footer-info">
-      <div class = "navigation-menu"> 
-        <p class = "bigger-letter">Prodavnica zdrave hrane Dobos</p>
-        <div>Cvijićeva 2, 11300 Smederevo</div>
-        <div>Telefon: <a href="tel:069-147-0516">069-147-0516</a></div>
-      </div>  
+  <footer class="footer-distributed">
 
-      <div class="navigation-menu">
-        <p class = "bigger-letter">Korisni linkovi</p>
-        <div>
-          <ul class="usefull-links">
-            <li><a href="file:///Users/sara/Documents/my_projects/dobos/index.html" aria-current="page">Naslovna</a></li>
-            <li ><a href="">O nama</a></li>
-            <li ><a href="https://shop.bio-una.com/blog/">Blog</a></li>
-            <li ><a href="https://shop.bio-una.com/kontakt/">Kontakt</a></li>
-            </ul>
-          </div>
-        </div>
+    <div class="footer-left">
+
+      <h3>Bio butik<span> Dobos</span></h3>
+
+      <p class="footer-links">
+        <a href="#" class="link-1">Pocetna</a>
+
+        <a href="#">Blog</a>
+
+        <a href="#">Cene</a>
+
+        <a href="#">O nama</a>
+
+        <a href="#">Korpa</a>
+
+        <a href="#">Kontakt</a>
+      </p>
+
+      <p class="footer-company-name">Bio butik Dobos © 2007</p>
     </div>
+
+    <div class="footer-center">
+
+      <div class="footer-center--item">
+        <div class="grid-item grid-item--left">
+          <i class="fa fa-map-marker"></i>
+        </div>
+        <div class="grid-item grid-item--right">
+          <p><span>11300 Smederevo</span> Cvijiceva 2, Smederevo</p>
+        </div>
+      </div>
+
+      <div class="footer-center--item">
+        <div class="grid-item grid-item--left">
+          <i class="fa fa-phone"></i>
+        </div>
+        <div class="grid-item grid-item--right">
+          <a href="tel:069-147-0516" style="color: white; font-weight: normal;">+(381)69 147-0516</a>
+        </div>
+      </div>
+
+      <div class="footer-center--item">
+        <div class="grid-item grid-item--left">
+          <i class="fa fa-envelope"></i>
+        </div>
+        <div class="grid-item grid-item--right">
+          <p><a href="mailto:dobosarevci@mts.rs" style="color: white; ">dobosarevic@mts.rs</a></p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-right">
+
+      <p class="footer-company-about">
+        <span>O nama </span>
+        Bio butik Dobos je prodavnica zdrave hrane i cajeva. Dodjite i posetite nas i uverite se u nas kvalitet.
+      </p>
+
+      <div class="footer-icons">
+
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-linkedin"></i></a>
+
+      </div>
+
+    </div>
+
   </footer>
 
-
-
-
-
-
-
-
-
-
- 
-
-       
-
-
-
-
-
-
-
-
-
-
-
-  <script src="scripts.js"></script>
+  <script src="slider.js"></script>
+  <script src="resources/assets/js/handlers.js"></script>
 
 </body>
 

@@ -1,0 +1,110 @@
+/**
+* -----------------------------------------------------------------------
+*                                  Colors
+* -----------------------------------------------------------------------
+*/
+
+$c-black: #000;
+$c-black--main: #191c1f;
+$c-black--second: #2d3033;
+$c-white--main: #fff;
+$c-white--dark: #dde1e6;
+$c-yellow--main: #ffff00;
+$c-silver: #b8c0ca;
+$c-whitesmoke: #f1f2f5;
+$c-charcoal-grey: #3e404d;
+$c-orange: #ec8c79;
+$c-pink: #fcebe8;
+$c-thunder-grey: #727a8c;
+$c-fog-white: #f6f8f9;
+$c-light-green: #ecfbf3;
+$c-faded-green: #3ddc84;
+
+
+/**
+ * -----------------------------------------------------------------------
+ *                                  Shadows
+ * -----------------------------------------------------------------------
+ */
+
+$shadow-1: 2px 2px 8px rgba(0, 0, 0, 0.1);
+$shadow-2: 0 2px 4px rgba(0, 0, 0, 0.2);
+$shadow-3: 0 2px 3px rgba(0, 0, 0, 0.2);
+
+/**
+* -----------------------------------------------------------------------
+*                              Font Families
+* -----------------------------------------------------------------------
+*/
+
+$noto-sans: 'Noto Sans', sans-serif;
+$noto-sans-regular: 'Noto Sans Regular', sans-serif;
+
+/**
+* -----------------------------------------------------------------------
+*                             	Letter Spacing
+* -----------------------------------------------------------------------
+*/
+
+$letter-spacing--big: .07rem;
+
+/**
+* -----------------------------------------------------------------------
+*                               Media Queries
+* -----------------------------------------------------------------------
+*/
+
+// Extra small screen / phone
+$screen-xs: 480px;
+
+// Small screen / tablet
+$screen-sm: 768px;
+
+// Medium screen / desktop
+$screen-md: 992px;
+
+// Large screen / wide desktop
+$screen-lg: 1200px;
+
+// So media queries don't overlap when required, provide a maximum
+$screen-xs-max: ($screen-sm - 1);
+$screen-sm-max: ($screen-md - 1);
+$screen-md-max: ($screen-lg - 1);
+
+/**
+* -----------------------------------------------------------------------
+*                               respond-to()
+* -----------------------------------------------------------------------
+*/
+
+@mixin respond-to($media) {
+	@if $media == mobile {
+		@media (max-width: $screen-xs-max) { @content }
+	}
+	@else if $media == tablet {
+		@media (min-width: $screen-sm) and (max-width: $screen-sm-max) { @content }
+	}
+	@else if $media == laptop {
+		@media (min-width: $screen-md) and (max-width: $screen-md-max) { @content }
+	}
+	@else if $media == desktop {
+		@media (min-width: $screen-lg) { @content }
+	}
+	@else if $media == laptop-up{
+		@media (min-width: $screen-md) and (max-width: $screen-lg) { @content }
+	}
+	@else if $media == tablet-down{
+		@media (max-width: $screen-sm-max) { @content }
+	}
+	@else {
+		@media screen and (min-width: $media + px) { @content; }
+	}
+}
+
+@mixin default-line-height {
+	line-height: calc(1.5em + .2vw);
+}
+
+@mixin mobile-line-height {
+	line-height: 1.2;
+}
