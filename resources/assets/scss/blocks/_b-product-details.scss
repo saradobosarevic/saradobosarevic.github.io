@@ -30,13 +30,10 @@
 
   .product-details-right {
     width: 100%;
+    padding: 15px;
 
     @include respond-to(992) {
       width: 50%;
-    }
-
-    .product-description {
-      text-align: justify;
     }
 
     .product-description-title {
