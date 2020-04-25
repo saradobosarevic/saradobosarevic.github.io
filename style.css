@@ -99,8 +99,7 @@ body {
     margin: 0px 10px;
     display: inline-block;
     background:none;
-    /* border-radius: 5px; */
-    /* box-shadow: 1rem 1rem 1rem -1rem #a0a0a0; */
+   
 }
 .post-slider .post-wrapper .post  .slider-image{
     width :100%;
