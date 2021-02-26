@@ -1,10 +1,23 @@
 .cart-block {
+    width: 60%;
+    .cart-icon {
+        &__representation {
+            width: 24px;
+            height: 22px;
+            @include respond-to(992) {
+                width: 30px;
+                height: 26px;
+            }
+        }
+    }
+    .cart-content-count {
+        margin-left: 20px;
+    }
     position: fixed;
-    margin-top: 10px;
-    $shopping-cart-red: #fd9638;
-
     .drop_down_card {
+        height: 50%;
         display: none;
+        z-index: 999;
         &.open {
             display: block;
         }
@@ -17,10 +30,13 @@
                 flex-direction: row;
                 align-items: center;
                 &__image {
-                    width: 70px;
+                    width: 190px;
                     margin-bottom: 10px;
                     margin-right: 10px;
                 }
+            }
+            .drop_down_card__name {
+                font-size: 30px;
             }
         }
         &__buttons {
@@ -37,14 +53,13 @@
                 background-color: green;
                 margin-right: 20px;
                 height: 30px;
-        
             }
             &_cart {
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 width: 50%;
-                background-color:red;
+                background-color: red;
                 height: 30px;
             }
         }
@@ -57,23 +72,17 @@
         content: attr(data-count);
         font-size: 40%;
         padding: 3px;
-        border-radius: 999px;
-        line-height: 0.75em;
         color: white;
-        color: $shopping-cart-red;
         text-align: center;
         min-width: 2em;
         font-weight: bold;
-        background: white;
-        border-style: solid;
     }
-    .fa-circle {
-        color: #313a3d;
+    .fa-inverse {
+        color: black;
     }
 }
 
 .products-section {
-    margin-top: 55px;
     padding: 35px;
     grid-column-start: 2;
     grid-row-start: 2;

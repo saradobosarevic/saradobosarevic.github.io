@@ -33,7 +33,7 @@ $(document).ready(function () {
 
 
     $('.product-card-footer .button-wrapper .addButton').on('click',function(e){
-        let cartCount = $('.cart-icon').attr('data-count');
+        let cartCount = $('.cart-content-count .cnt').attr('data-count');
         let cart = localStorage.getItem('cart');
         if (!cart) {
             cart = {};
@@ -49,18 +49,21 @@ $(document).ready(function () {
             name: $(this).attr('data-product-name'),
             qty,
             price: qty * parseInt(price),
-            currency        }
+            currency        
+        }
         cartCount = parseInt(cartCount);
-        $('.cart-icon').attr('data-count',cartCount + 1); 
-        localStorage.setItem('cartCount',cartCount + 1);
+        const newCartCount = cartCount + 1;
+        debugger;
+        $('.cart-content-count .cnt').attr('data-count',newCartCount).empty().append(newCartCount); 
+        localStorage.setItem('cartCount',newCartCount);
         localStorage.setItem('cart', JSON.stringify(cart));
     });
 
 });
 
 $('.cart-icon').on('click', function() {
-
     $('.drop_down_card').toggleClass('open');
+    $('.overlay').toggleClass('show');
 
 });
 
