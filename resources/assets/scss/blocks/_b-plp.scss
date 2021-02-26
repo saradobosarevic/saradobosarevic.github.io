@@ -1,5 +1,7 @@
 .cart-block {
     width: 60%;
+    position: fixed;
+
     .cart-icon {
         &__representation {
             width: 24px;
@@ -10,10 +12,11 @@
             }
         }
     }
+
     .cart-content-count {
         margin-left: 20px;
     }
-    position: fixed;
+
     .drop_down_card {
         height: 50%;
         display: none;
