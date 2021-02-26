@@ -53,6 +53,7 @@
     }
     .footer-icons {
         margin-top: 25px;
+        text-align: center;
 
         a {
             display: inline-block;
@@ -104,15 +105,22 @@
             line-height: 42px;
             margin: 10px 15px;
             vertical-align: middle;
+            margin-left: 0;
             
             &.fa-envelope {
                 font-size: 17px;
                 line-height: 38px;
             }
 
-            @media (max-width: 880px) {
-                margin-left: 0;
+
+            @include respond-to(992) {
+            
+                margin-left: 15px;
             }
+            
+            // @media (max-width: 880px) {
+            //     margin-left: 0;
+            // }
         }
         
         p {

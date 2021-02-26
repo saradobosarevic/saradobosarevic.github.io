@@ -1,0 +1,11 @@
+
+.m-form {
+    &__input_fields {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__input_field {
+        width: 50%;
+        height: 100px;
+    }
+}

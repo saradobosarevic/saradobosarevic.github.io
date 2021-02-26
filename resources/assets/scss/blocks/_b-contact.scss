@@ -1,0 +1,258 @@
+// Grid
+@mixin grid($column) {
+    width: (100% / 12) * $column;
+    margin: 0 auto;
+}
+
+// Transition Ease
+@mixin ease($time: 333ms, $attr: all, $curve: ease-in-out) {
+    -webkit-transition: $attr $time $curve;
+    -moz-transition: $attr $time $curve;
+    -o-transition: $attr $time $curve;
+    -ms-transition: $attr $time $curve;
+    transition: $attr $time $curve;
+}
+
+//-- Lato --//
+@mixin lato-1 {
+    font-family: "Lato", sans-serif;
+    font-weight: 100;
+}
+@mixin lato-1-i {
+    @include lato-1;
+    font-style: italic;
+}
+
+@mixin lato-3 {
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+}
+@mixin lato-3-i {
+    @include lato-3;
+    font-style: italic;
+}
+
+@mixin lato-4 {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+}
+@mixin lato-4-i {
+    @include lato-4;
+    font-style: italic;
+}
+
+@mixin lato-7 {
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+}
+@mixin lato-7-i {
+    @include lato-7;
+    font-style: italic;
+}
+
+@mixin lato-9 {
+    font-family: "Lato", sans-serif;
+    font-weight: 900;
+}
+@mixin lato-9-i {
+    @include lato-9;
+    font-style: italic;
+}
+
+// Colors
+$blue: #313a3d;
+$orange: #fd9638;
+$dark-orange: darken($orange, 20%);
+$grey: #b6b6b6;
+$light-grey: lighten($grey, 15%);
+
+$background: #efefef;
+$field-color: #e8e9ea;
+
+.b-contact_background {
+    background: $background;
+
+    section {
+        @include lato-3;
+        font-size: 62.5%;
+        color: $grey;
+        background: white;
+        margin: 100px auto 120px;
+        text-align: center;
+        padding: 50px 0 110px;
+        width: 80%;
+        max-width: 1100px;
+
+        .hire-header {
+            margin-bottom: 40px;
+            @include respond-to(992) {
+                font-size: 40px;
+            }
+
+            @include respond-to(1200) {
+                font-size: 40px;
+            }
+            font-size: 20px;
+            @include lato-1;
+        }
+    }
+}
+
+// Form
+.contact-form {
+    @include grid(7);
+
+    .field {
+        width: 100%;
+        position: relative;
+        margin-bottom: 15px;
+
+        $hover-label-width: 18%;
+        $placeholder-bumper: 1.5%;
+        $label-padding: 18px;
+
+        // Label
+        label {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: $blue;
+            width: 100%;
+            padding: ($label-padding + 0px) 0;
+            font-size: 1.45em;
+            letter-spacing: 0.075em;
+
+            @include ease(333ms);
+        }
+
+        // Fields
+        .name,
+        .email,
+        .message {
+            border: none;
+            background: $field-color;
+            width: 100% - $hover-label-width - $placeholder-bumper;
+            margin: 0;
+            padding: $label-padding 0;
+            padding-left: $hover-label-width + $placeholder-bumper;
+            color: $blue;
+            font-size: 1.4em;
+            letter-spacing: 0.05em;
+
+            &#msg {
+                height: 53px;
+                resize: none;
+                @include ease(333ms);
+            }
+
+            // Focus and JS Toggle Class
+            &:focus,
+            &.focused {
+                outline: none;
+
+                &#msg {
+                    padding-bottom: 150px;
+                }
+            }
+        }
+
+        // Field Hover
+        &:hover {
+            label {
+                width: $hover-label-width;
+                background: $blue;
+                color: white;
+            }
+        }
+    }
+
+    // Submit Button
+    .sendButton {
+        margin-top: 10px;
+        background: $orange;
+        color: white;
+        -webkit-appearance: none;
+        border: none;
+        position: relative;
+        padding: 13px 50px;
+        font-size: 1.4em;
+        letter-spacing: 0.1em;
+        @include lato-3;
+        @include ease;
+
+        &:hover {
+            background: $blue;
+            color: $orange;
+        }
+
+        &:focus {
+            outline: none;
+            background: $dark-orange;
+        }
+    }
+}
+.map-container {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 40px;
+    iframe {
+        height: 350px;
+        width: 500px;
+        @include respond-to(992) {
+            width: 700px;
+            height: 400px;
+        }
+        @include respond-to(1200) {
+            width: 800px;
+            height: 450px;
+        }
+    }
+}
+
+.slide-panels {
+    .slide-panels-title {
+        font-size: 16px;
+        text-align: center;
+        margin-bottom: 8px;
+        @include respond-to(992) {
+            font-size: 20px;
+        }
+        @include respond-to(1200) {
+            font-size: 20px;
+        }
+    }
+    .slide-open {
+        display: flex;
+        justify-content: center;
+        .slide-title {
+            font-weight: bold;
+        }
+
+        .slide-panel {
+            font-size: 16px;
+            line-height: 21px;
+            padding-left: 18px;
+            @include respond-to(992) {
+                font-size: 20px;
+            }
+            @include respond-to(1200) {
+                font-size: 20px;
+            }
+        }
+        .store-hours {
+            display: block;
+            margin-top: 12px;
+        }
+        .day {
+            float: left;
+            width: 107px;
+            font-weight: bold;
+            @include respond-to(992) {
+                margin-right: 270px;
+            }
+            @include respond-to(1200) {
+                margin-right: 400px;
+            }
+        }
+    }
+}

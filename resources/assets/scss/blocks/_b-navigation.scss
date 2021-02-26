@@ -1,5 +1,4 @@
 .navigation {
-    height: 50px;
     top: 0;
     transition: top 0.3s;
     position: fixed;
@@ -13,7 +12,7 @@
         padding: 0;
         margin-inline-start: 0;
         margin-block-start: 0;
-        list-style: none; 
+        list-style: none;
         @include respond-to(992) {
             display: flex;
         }
@@ -21,17 +20,13 @@
         a {
             text-decoration: none;
             color: #8b8b8b;
-            width: 100px;
+            width: 110px;
             display: block;
             padding: 20px 15px;
-            font-family: "Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
+            font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
             columns: #f2f2f2;
             text-align: center;
             letter-spacing: 2px;
-        }
-        a:hover {
-            transition: 0.5s;
-            text-transform: uppercase;
         }
     }
 
@@ -57,7 +52,7 @@
 
             .m-hamburger__icon-close {
                 display: block;
-            }        
+            }
         }
 
         @include respond-to(992) {
@@ -70,10 +65,10 @@
 
         .m-hamburger__icon {
             svg {
-                fill: white;
+                fill: black;
             }
         }
-        
+
         .header-items {
             li {
                 a {
@@ -111,19 +106,17 @@
             }
             a {
                 text-decoration: none;
-                font-family: Helvetica Neue,Helvetica,Roboto,Arial,sans-serif;
+                font-family: Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
                 color: #8b8b8b;
-
             }
-
         }
     }
 
     &--scrolled {
         background-color: rgba(45, 48, 51, 0.9);
 
-        ul {    
-            .m-hamburger__item {    
+        ul {
+            .m-hamburger__item {
                 a {
                     svg {
                         fill: white;
