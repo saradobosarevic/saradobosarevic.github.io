@@ -130,12 +130,12 @@ $field-color: #e8e9ea;
         .email,
         .message {
             border: none;
-            background: $field-color;
+            background: $blue;
             width: 100% - $hover-label-width - $placeholder-bumper;
             margin: 0;
             padding: $label-padding 0;
             padding-left: $hover-label-width + $placeholder-bumper;
-            color: $blue;
+            color: white;
             font-size: 1.4em;
             letter-spacing: 0.05em;
 
@@ -244,6 +244,7 @@ $field-color: #e8e9ea;
             margin-top: 12px;
         }
         .day {
+            text-align: left;
             float: left;
             width: 107px;
             font-weight: bold;
